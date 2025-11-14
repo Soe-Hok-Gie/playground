@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	algoritma "playground/Algoritma"
+	algoritma "playground/algoritma"
 )
 
 func main() {
@@ -12,7 +12,11 @@ func main() {
 		{Id: 2, User: "Awanda", Amount: 60},
 		{Id: 3, User: "Jek", Amount: 70},
 	}
-
+	//FilterAndSort
 	filtered := algoritma.FilterAndSort(transactions, "Jek")
 	fmt.Println(filtered)
+
+	//TotalPerUser
+	Totals := algoritma.TotalPerUser(transactions)
+	fmt.Println(Totals)
 }
