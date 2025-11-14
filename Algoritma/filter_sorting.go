@@ -1,6 +1,8 @@
 package algoritma
 
-import "sort"
+import (
+	"sort"
+)
 
 type Transaction struct {
 	Id     int
@@ -8,10 +10,10 @@ type Transaction struct {
 	Amount int
 }
 
-func FilterAndSort(transaction []Transaction, user string) []Transaction {
+func FilterAndSort(transactions []Transaction, user string) []Transaction {
 	//step 1
 	var result []Transaction
-	for _, t := range transaction {
+	for _, t := range transactions {
 		if t.User == user {
 			result = append(result, t)
 		}
