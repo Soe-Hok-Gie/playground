@@ -10,6 +10,7 @@ type Transaction struct {
 	Amount int
 }
 
+// Tulis fungsi untuk mengambil transaksi dari user tertentu dan urutkan berdasarkan Amount DESC.
 func FilterAndSort(transactions []Transaction, user string) []Transaction {
 	//step 1
 	var result []Transaction
@@ -24,5 +25,10 @@ func FilterAndSort(transactions []Transaction, user string) []Transaction {
 		return result[i].Amount > result[j].Amount
 	})
 	return result
+
+}
+
+// Tulis fungsi untuk menghitung total Amount per user.
+func TotalPerUser(transactons []Transaction) []Transaction {
 
 }
