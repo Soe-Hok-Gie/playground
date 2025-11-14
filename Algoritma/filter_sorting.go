@@ -29,7 +29,7 @@ func FilterAndSort(transactions []Transaction, user string) []Transaction {
 }
 
 // Tulis fungsi untuk menghitung total Amount per user.
-func TotalPerUser(transactons []Transaction) []Transaction {
+func TotalPerUser(transactons []Transaction) map[string]int {
 	totals := make(map[string]int)
 	for _, t := range transactons {
 		totals[t.User] += t.Amount
