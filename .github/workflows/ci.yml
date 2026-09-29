@@ -6,18 +6,18 @@ on:
 
 jobs:
   fitur-ci:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest # Sudah digeser ke dalam (2 spasi dari fitur-ci)
+    steps: # Sudah digeser ke dalam (2 spasi dari fitur-ci)
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Go
-      uses: actions/setup-go@v5
-      with:
-        go-version: "1.22"
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
 
-    - name: Install Dependensi
-      uses: go mod download
+      - name: Install Dependensi
+        run: go mod download # Diganti dari 'uses' menjadi 'run'
 
-    - name: Run Unit Test
-      uses: go test -v ./...
+      - name: Run Unit Test
+        run: go test -v ./... # Diganti dari 'uses' menjadi 'run'
